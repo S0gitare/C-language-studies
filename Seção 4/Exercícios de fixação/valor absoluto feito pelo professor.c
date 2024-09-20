@@ -3,7 +3,7 @@
 #include <stdlib.h>
 #include <locale.h>
  
-void main(){
+int main(){
  
     //Para usar acentos
     setlocale(LC_ALL, "");
@@ -15,5 +15,6 @@ void main(){
     printf("Digite a segunda nota:");
     scanf("%d", &nota2);
     printf("A diferença entre os dois é: %d", abs(nota1 - nota2) );
- 
+
+    return 0;
 }
