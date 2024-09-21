@@ -12,8 +12,8 @@ int main (){
     printf("\n      Media de Notas");
     printf("\n----------------------------");
 
-    printf("\n Digite o nome do aluno: ");
-    scanf("%s", nome); //lê a string nome armazenada
+    printf("\n Digite o nome completo do aluno: ");
+    fgets(nome, sizeof(nome), stdin); //lê s string armazenada com espaços
 
     //para inserir os valores e ler as notas
     printf("\n Digite a nota do primeiro semestre: "); 
