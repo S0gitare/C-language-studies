@@ -1,12 +1,12 @@
-//programa que calcula uma equação do segundo grau nos 3 casos do delta
+//* programa que calcula uma equação do segundo grau nos 3 casos do delta
 
-//Equações de exemplo:
+//* Equações de exemplo:
 
-// 2x² -5x + 3 = 0 //possui duas raízes
+//* 2x² -5x + 3 = 0 //possui duas raízes
 
-// x² - 6x + 9 = 0 //possui apenas 1 raiz
+//* x² - 6x + 9 = 0 //possui apenas 1 raiz
 
-// 7x² + 3x +4 = 0 //não possui raízes
+//* 7x² + 3x +4 = 0 //não possui raízes
 
 #include <stdio.h>
 #include <stdlib.h>
