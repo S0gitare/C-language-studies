@@ -15,6 +15,7 @@ int main() {
 
     for (i = 0; i < N1; i++) {
         printf("\n %d x %d = %d", N1, i, N1 * i);
+        printf("\n");
     }
 
     system("pause");
