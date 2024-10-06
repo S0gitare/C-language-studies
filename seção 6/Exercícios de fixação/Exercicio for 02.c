@@ -2,20 +2,21 @@
 //* De um número informado pelo usuário
 
 #include <stdio.h>
+#include <stdlib.h>
+#include <unistd.h>
 
 int main() {
-    int N1, i;
+    int N, i;
 
-    printf("Digite um número: ");
-    scanf("%d", &N1);
+    printf("Digite um numero: ");
+    scanf("%d", &N);
 
     printf("\n ---------------------\n");
-    printf("\n    Tabuada do %d:\n", N1);
+    printf("\n    Tabuada do %d:\n", N);
     printf("\n ----------------------\n");
 
-    for (i = 0; i < N1; i++) {
-        printf("\n %d x %d = %d", N1, i, N1 * i);
-        
+    for (i = 0; i <= 10; i++) {
+        printf("\n %d + %d = %d\n", N, i, N + i);
     }
 
     system("pause");
