@@ -3,6 +3,7 @@
         "random": "c",
         "stdio.h": "c",
         "locale.h": "c",
-        "EXERCICIO SWITCH.C": "cpp"
+        "EXERCICIO SWITCH.C": "cpp",
+        "iostream": "cpp"
     }
 }
