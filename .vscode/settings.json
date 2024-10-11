@@ -4,6 +4,8 @@
         "stdio.h": "c",
         "locale.h": "c",
         "EXERCICIO SWITCH.C": "cpp",
-        "iostream": "cpp"
+        "iostream": "cpp",
+        "array": "c",
+        "string": "c"
     }
 }
