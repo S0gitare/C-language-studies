@@ -23,10 +23,12 @@ int main(){
     cout << "\n Qual numero deseja encontrar? \n";
     cin >> search;
 
-    if (simpleSearch(vetor, search) == 1) {
-        cout << "Valor encontrado!";
-    } else {
-        cout << "Error";
+    simpleSearch(vetor, search);
+
+    if (simpleSearch(vetor, search) == true) {
+        cout << "Valor encontrado! \n";
+    } else{
+        cout << "Error \n";
     }
 
     system("pause");
@@ -35,20 +37,15 @@ int main(){
 
 int simpleSearch(int vetor[TAM], int search){
     int i;
-    bool found;
-     for (i = 0; i < TAM; i++) {
+    bool found = false;
+    for (i = 0; i < TAM; i++) {
         if (vetor[i] == search) {
             found = true;
-            search = i;
-        }else {
-            found = false;
         }
     }
     if (found == true) {
         return 1;
-        cout << "\n O valor foi encontrado na posicao: \n" << search;
-    }else {
-        return -1;
-        cout << "\n O valor nao foi encontrado no vetor \n";
+    } else {
+        return 0;
     }
 }
