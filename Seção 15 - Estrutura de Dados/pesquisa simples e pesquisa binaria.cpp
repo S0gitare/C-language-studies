@@ -8,6 +8,7 @@ using namespace std;
 #define TAM 10
 
 int simpleSearch(int vetor[TAM], int search, int *encontrado);
+int binario(int vetor[TAM], int search, int *encontrado);
 void imprime(int vetor[TAM]);
 
 int main(){
@@ -15,15 +16,37 @@ int main(){
     int vetor[TAM] = {1,23,44,56,63,72,84,90,98,103};
     int search;
     int encontrado;
+    int option;
+
     imprime(vetor);
     cout << "\n Qual numero deseja encontrar? ";
     cin >> search;
+    cout << "\n Qual o metodo que deseja usar?";
+    cout << "\n [1]-Busca Simples";
+    cout << "\n [2]-Busca Binaria\n";
+    cin >> option;
 
-    if (simpleSearch(vetor, search, &encontrado) == true) {
+    switch (option){
+    case 1:
+        if (simpleSearch(vetor, search, &encontrado) == true) {
         cout << "\n Valor encontrado! \n";
         cout << "\n Encontrado na posicao: " << encontrado << "\n";
-    } else{
+        } else{
         cout << "Error \n";
+        }
+        break;
+    
+    case 2:
+        if (binario(vetor, search, &encontrado) == true) {
+        cout << "\n Valor encontrado! \n";
+        cout << "\n Encontrado na posicao: " << encontrado << "\n";
+        } else{
+        cout << "Error \n";
+        }
+        break;
+    default:
+        cout << "\n Opcao invalida \n";
+        break;
     }
 
     system("pause");
@@ -63,6 +86,7 @@ int binario(int vetor[TAM], int search, int *encontrado){
             right = meio - 1;
         }
     }
+    return 0;
 }
 void imprime(int vetor[TAM]){
     int i;
