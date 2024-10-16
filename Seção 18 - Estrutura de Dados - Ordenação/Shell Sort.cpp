@@ -8,34 +8,37 @@ using namespace std;
 #define TAM 10
 
     void imprime(int vetor[TAM]);
-    void selection_sort(int vetor[TAM]);
+    void shell_sort(int vetor[TAM]);
 
 int main(){
     int vetor[TAM] = {10,9,8,7,6,5,4,3,2,1};
     imprime(vetor);
-    selection_sort(vetor);
+    shell_sort(vetor);
     imprime(vetor);
-
 
     system("pause");
     return 0;
 }
-void selection_sort(int vetor[TAM]){
-    int pmv; //* Posição de menor valor
+void shell_sort(int vetor[TAM]){
     int i, j;
-    int aux;
+    int atual;
+    int h = 1;
 
-    for (i = 0; i < TAM; i++){
-        pmv = i;
-        for (j = i + 1; j < TAM; j++){
-            if (vetor[j] < vetor[pmv]){
-                pmv = j;
+    while (h < TAM){
+        h = 3*h + 1;
+    }
+    while (h > 1){
+        h = h/3;
+
+        for (i = 1; i < TAM; i++){
+            atual = vetor[i];
+            j = i - h;
+
+            while((j >= 0) && (atual < vetor[j])) {
+                vetor[j + h] = vetor[j];
+                j = j - h;
             }
-        }
-        if (pmv != i){
-            aux = vetor[i];
-            vetor[i] = vetor[pmv];
-            vetor[pmv] = aux;
+            vetor[j + h] = atual;
         }
     }
 }
