@@ -4,17 +4,23 @@
 #include <stdlib.h>
 #include <stdio.h>
 #include <stdbool.h>
+#include <fstream>
 using namespace std;
-#define TAM 10
+#define TAM 100000
 
-    void imprime(int vetor[TAM]);
     void quick_sort(int vetor[TAM], int inicio, int fim);
+    void values(int vetor[TAM]);
 
 int main(){
-    int vetor[TAM] = {10,9,8,7,6,5,4,3,2,1};
-    imprime(vetor);
+    int vetor[TAM];
+
+    values(vetor);
     quick_sort(vetor, 0, TAM);
-    imprime(vetor);
+
+    for (int i = 0; i < TAM; i++) {
+        cout << vetor[i] << "|";
+    }
+    cout << "\n";
 
     system("pause");
     return 0;
@@ -50,10 +56,8 @@ void quick_sort(int vetor[TAM], int inicio, int fim){
         quick_sort(vetor, L, fim);
     }
 }
-void imprime(int vetor[TAM]){
-    int i;
-    for (i = 0; i < TAM; i++) {
-        cout << vetor[i] << "|";
+void values(int vetor[TAM]){
+    for (int i = 0; i < TAM; i++){
+        vetor[i] = TAM - 1 - i;
     }
-    cout << "\n";
 }
