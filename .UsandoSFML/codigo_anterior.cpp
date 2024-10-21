@@ -8,6 +8,11 @@
 using namespace std;
 using sf::RenderWindow;
 
+/*
+g++ -Wall -Wextra -Werror teste.cpp -o app.exe -lsfml-graphics -lsfml-window -lsfml-system
+.\app.exe
+*/
+
 int main() {
     RenderWindow janela(sf::VideoMode(800, 600), "minha primeira janela");
 
