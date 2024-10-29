@@ -36,5 +36,7 @@ int main(){
     Brasileiro carioca;
     carioca.set_nacionalidade("Brasileiro");
     cout << "Nacionalidade: " << carioca.get_nacionalidade() << endl;
+    carioca.setnome("joao");
+    cout << "Nome: " << carioca.getnome() << endl;
     return 0;
 }
